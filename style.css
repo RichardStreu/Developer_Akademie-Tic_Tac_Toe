@@ -1,0 +1,64 @@
+#playground {
+  border-collapse: collapse;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+#playground td {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  position: relative;
+}
+
+#playground tr td:nth-child(2),
+#playground tr:nth-child(2) td {
+  border-color: gray;
+}
+
+#playground tr:first-child td {
+  border-top: none;
+}
+
+#playground tr:last-child td {
+  border-bottom: none;
+}
+
+#playground tr td:first-child {
+  border-left: none;
+}
+
+#playground tr td:last-child {
+  border-right: none;
+}
+
+#players {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#players button {
+  font-size: 1.5em;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#playerX.active, #playerO.active {
+  background-color: lightgreen;
+}
+
+.win-line {
+  position: absolute;
+  width: 120%; /* Macht die Linie länger */
+  height: 5px;
+  background-color: red;
+  top: 50%;
+  left: -10%; /* Zentriert die längere Linie */
+  transform-origin: 50% 50%;
+}
+

@@ -7,6 +7,31 @@
   <title>Tic Tac Toe</title>
 </head>
 <body>
+
+  <div id="players">
+    <button id="playerX" onclick="choosePlayer('cross')">X</button>
+    <button id="playerO" onclick="choosePlayer('circle')">O</button>
+</div>
+<button id="resetButton" onclick="resetGame()">Reset Game</button>
+
+<table id="playground">
+    <tr>
+        <td onclick="makeMove(0)"></td>
+        <td onclick="makeMove(1)"></td>
+        <td onclick="makeMove(2)"></td>
+    </tr>
+    <tr>
+        <td onclick="makeMove(3)"></td>
+        <td onclick="makeMove(4)"></td>
+        <td onclick="makeMove(5)"></td>
+    </tr>
+    <tr>
+        <td onclick="makeMove(6)"></td>
+        <td onclick="makeMove(7)"></td>
+        <td onclick="makeMove(8)"></td>
+    </tr>
+</table>
+
   
   <script src="./script.js"></script>
 </body>
