@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <title>Tic Tac Toe</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <h1>TIC TAC TOE</h1>
 
-  <div id="players">
-    <button id="playerX" onclick="choosePlayer('cross')">X</button>
-    <button id="playerO" onclick="choosePlayer('circle')">O</button>
-</div>
-<button id="resetButton" onclick="resetGame()">Reset Game</button>
+    <div id="players">
+      <button id="playerX" onclick="choosePlayer('cross')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32px" height="32px" class="svg-x" style="filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));">
+          <line x1="10" y1="10" x2="90" y2="90" stroke="rgb(254, 192, 0)" stroke-width="32" stroke-linecap="butt"/>
+          <line x1="90" y1="10" x2="10" y2="90" stroke="rgb(254, 192, 0)" stroke-width="32" stroke-linecap="butt"/>
+          </svg>
+      </button>
+      <button id="playerO" onclick="choosePlayer('circle')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32px" height="32px" class="svg-o" style="filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));">
+          <circle cx="50" cy="50" r="40" stroke="rgb(0, 175, 241)" stroke-width="12" fill="none"/>
+          </svg>
+      </button>
+    </div>
 
-<table id="playground">
-    <tr>
+    <table id="playground">
+      <tr>
         <td onclick="makeMove(0)"></td>
         <td onclick="makeMove(1)"></td>
         <td onclick="makeMove(2)"></td>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <td onclick="makeMove(3)"></td>
         <td onclick="makeMove(4)"></td>
         <td onclick="makeMove(5)"></td>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <td onclick="makeMove(6)"></td>
         <td onclick="makeMove(7)"></td>
         <td onclick="makeMove(8)"></td>
-    </tr>
-</table>
+      </tr>
+    </table>
 
-  
-  <script src="./script.js"></script>
-</body>
+    <button id="resetButton" onclick="resetGame()">Reset Game</button>
+
+    <script src="./script.js"></script>
+  </body>
 </html>

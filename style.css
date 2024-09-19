@@ -8,7 +8,7 @@
 }
 
 #playground td {
-  border: 1px solid black;
+  border: 3px solid white;
   width: 100px;
   height: 100px;
   cursor: pointer;
@@ -17,7 +17,7 @@
 
 #playground tr td:nth-child(2),
 #playground tr:nth-child(2) td {
-  border-color: gray;
+  border-color: white;
 }
 
 #playground tr:first-child td {
@@ -43,22 +43,44 @@
 }
 
 #players button {
-  font-size: 1.5em;
-  padding: 10px 20px;
+  background: none; /* Kein Hintergrund */
+  border: none; /* Kein Rahmen */
+  padding: 10px;
   cursor: pointer;
 }
 
-#playerX.active, #playerO.active {
-  background-color: lightgreen;
+#players button svg {
+  display: block; /* Damit das SVG korrekt angezeigt wird */
 }
+
+#players button.active {
+  filter: none; /* Aktiver Spieler hat keinen Filter */
+}
+
+#players button:not(.active) {
+  filter: brightness(0.6); /* Nicht aktiver Spieler wird abgedunkelt */
+}
+
+/* #playerX.active, #playerO.active {
+  background-color: lightgreen;
+} */
 
 .win-line {
   position: absolute;
   width: 120%; /* Macht die Linie länger */
-  height: 5px;
-  background-color: red;
-  top: 50%;
+  height: 6px;
+  background-color: white;
+  top: 45%;
   left: -10%; /* Zentriert die längere Linie */
-  transform-origin: 50% 50%;
+  /* transform-origin: 50% 50%; */
+  transform: translateY(50%);
 }
 
+body {
+  background-color: rgb(50, 50, 50);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
