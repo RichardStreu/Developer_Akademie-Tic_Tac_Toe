@@ -142,14 +142,14 @@ function drawLine(combination) {
     document.querySelectorAll(".win-line").forEach((line) => {
       line.style.width = "150%"; // Diagonale länger machen
       line.style.left = "-20%"; // Zentrieren
-      line.style.transform = "rotate(46deg)";
+      line.style.transform = "rotate(45deg)";
     });
   } else if (combination[0] === 2 && combination[1] === 4 && combination[2] === 6) {
     // Diagonale (von oben rechts nach unten links)
     document.querySelectorAll(".win-line").forEach((line) => {
       line.style.width = "150%"; // Diagonale länger machen
       line.style.left = "-20%"; // Zentrieren
-      line.style.transform = "rotate(-46deg)";
+      line.style.transform = "rotate(-45deg)";
     });
   }
 }
