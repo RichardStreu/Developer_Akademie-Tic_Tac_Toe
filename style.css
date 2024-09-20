@@ -1,5 +1,6 @@
 #playground {
   border-collapse: collapse;
+  table-layout: fixed; /* Damit alle Zellen dieselbe Größe haben */
   width: 300px;
   height: 300px;
   text-align: center;
@@ -14,10 +15,22 @@
   height: 100px;
   cursor: pointer;
   position: relative;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0; /* Keine zusätzlichen Abstände */
 }
 
 #playground td:hover {
   background-color: rgb(61, 61, 61);
+}
+
+#playground td svg {
+  display: inline-block; /* SVGs als Inline-Block */
+  vertical-align: middle; /* SVGs zentriert vertikal */
+  width: 100%; /* Maximale Breite für SVG */
+  height: 100%; /* Maximale Höhe für SVG */
+  max-width: 40px; /* Maximal 40px, aber zentriert */
+  max-height: 40px;
 }
 
 #resetButton {

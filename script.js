@@ -23,9 +23,9 @@ function render() {
     if (!cells[index].innerHTML) {
       if (field === "cross") {
         cells[index].innerHTML = `
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32px" height="32px" class="svg-x" style="filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="41.6px" height="41.6px" class="svg-x" style="filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));">
               <g transform="scale(0)" style="transform-origin: 50% 50%;">
-              <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.2s" fill="freeze" />
+              <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.25s" fill="freeze" />
               <line x1="10" y1="10" x2="90" y2="90" stroke="rgb(254, 192, 0)" stroke-width="32" stroke-linecap="butt"/>
               <line x1="90" y1="10" x2="10" y2="90" stroke="rgb(254, 192, 0)" stroke-width="32" stroke-linecap="butt"/>
               </g>
@@ -33,9 +33,9 @@ function render() {
               `;
       } else if (field === "circle") {
         cells[index].innerHTML = `
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32px" height="32px" class="svg-o" style="filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="41.6px" height="41.6px" class="svg-o" style="filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));">
               <circle cx="50" cy="50" r="40" stroke="rgb(0, 175, 241)" stroke-width="12" fill="none" stroke-dasharray="251.2" stroke-dashoffset="251.2">
-              <animate attributeName="stroke-dashoffset" from="251.2" to="0" dur="0.2s" fill="freeze" keyTimes="0; 1" calcMode="spline" keySplines="0.42 0 0.58 1"/>
+              <animate attributeName="stroke-dashoffset" from="251.2" to="0" dur="0.25s" fill="freeze" keyTimes="0; 1" calcMode="spline" keySplines="0.42 0 0.58 1"/>
               </circle>
               </svg>
               `;
@@ -201,9 +201,9 @@ function updateButtonState(activePlayer) {
 function checkPlaygroundForEmptyFields(fields) {
   let areThereEmptyFields = false;
   for (let i = 0; i < fields.length; i++) {
-      if (fields[i] == null) {
-        areThereEmptyFields = true;
-      }
+    if (fields[i] == null) {
+      areThereEmptyFields = true;
+    }
   }
 
   if (!areThereEmptyFields) {
